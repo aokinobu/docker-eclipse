@@ -1,7 +1,2 @@
 #!/bin/bash
-
-docker run -ti --rm \
-           -e DISPLAY=$DISPLAY \
-           -v /tmp/.X11-unix:/tmp/.X11-unix \
-           -v `pwd`:/workspace \
-           fgrehm/eclipse:v4.4.1
+docker run -ti --rm -e DISPLAY=:0 -v /tmp/.X11-unix:/tmp/.X11-unix -v /home/aoki//eclipse/.eclipse:/home/developer/.eclipse -v /home/aoki//eclipse/workspace:/home/developer/workspace  --name docker-eclipse aoki/docker-eclipse
