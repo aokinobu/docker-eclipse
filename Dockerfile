@@ -53,6 +53,7 @@ RUN chmod +x /usr/local/bin/eclipse && \
 
 RUN apt-get install -y net-tools telnet
 RUN apt-get install -y ssh
+RUN apt-get update; apt-get install -y chromium
 
 USER developer
 ENV HOME /home/developer
